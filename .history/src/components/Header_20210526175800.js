@@ -3,7 +3,16 @@ import PropTypes from "prop-types";
 const Header = ({ title }) => {
   return (
     <header>
-      <h1>{title}</h1>
+      <h1
+        style={{
+          border: "5px solid",
+          color: "red",
+          backgroundColor: "black",
+          padding: ".7em",
+        }}
+      >
+        {title}
+      </h1>
     </header>
   );
 };
@@ -15,14 +24,5 @@ Header.defaultProps = {
 Header.propTypes = {
   title: PropTypes.string.isRequired,
 };
-
-// CSS IN JS
-// const headingStyle = {
-//   border: "5px solid",
-//   color: "red",
-//   backgroundColor: "black",
-//   padding: ".7em",
-//   textAlign: "center",
-// };
 
 export default Header;

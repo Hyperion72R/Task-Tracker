@@ -16,13 +16,4 @@ Header.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-// CSS IN JS
-// const headingStyle = {
-//   border: "5px solid",
-//   color: "red",
-//   backgroundColor: "black",
-//   padding: ".7em",
-//   textAlign: "center",
-// };
-
 export default Header;

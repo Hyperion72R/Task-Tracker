@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
+import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from "react-dom";
 
 const Header = ({ title }) => {
   return (
     <header>
-      <h1>{title}</h1>
+      <h1 style={{border: 1px __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED, color: "red", backgroundColor: "black" }}>{title}</h1>
     </header>
   );
 };
@@ -15,14 +16,5 @@ Header.defaultProps = {
 Header.propTypes = {
   title: PropTypes.string.isRequired,
 };
-
-// CSS IN JS
-// const headingStyle = {
-//   border: "5px solid",
-//   color: "red",
-//   backgroundColor: "black",
-//   padding: ".7em",
-//   textAlign: "center",
-// };
 
 export default Header;
