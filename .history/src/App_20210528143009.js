@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 
 function App() {
-  const ExampleData = [
+  const x = [
     {
       id: 1,
       text: "Doctors Appointment",
@@ -23,19 +23,11 @@ function App() {
       reminder: false,
     },
   ];
-  const [tasks, setTasks] = useState(ExampleData);
-
-  // Delete Task
-
-  const deleteTask = (id) => {
-    setTasks(tasks.filter((task) => task.id !== id));
-    console.log("delete", id);
-  };
-
+  const [tasks, setTasks] = useState(x);
   return (
     <div className="container">
       <Header />
-      <Tasks tasks={tasks} onDelete={deleteTask} />
+      <Tasks tasks={tasks} />
     </div>
   );
 }
