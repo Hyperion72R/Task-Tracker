@@ -6,7 +6,7 @@ const AddTask = ({ onAdd }) => {
   const [reminder, setReminder] = useState(false);
 
   const onSubmit = (e) => {
-    e.preventDefault();
+    e.prevenDefault();
 
     if (!text) {
       alert("Please add a task");
@@ -21,7 +21,7 @@ const AddTask = ({ onAdd }) => {
   };
 
   return (
-    <form className="add-form" onSubmit={onSubmit}>
+    <form className="add-form" onSubmit={onAdd}>
       <div className="form-control">
         <label>Task</label>
         <input
@@ -44,7 +44,6 @@ const AddTask = ({ onAdd }) => {
         <label>Set Reminder</label>
         <input
           type="checkbox"
-          checked={reminder}
           value={reminder}
           onChange={(e) => setReminder(e.currentTarget.checked)}
         />
