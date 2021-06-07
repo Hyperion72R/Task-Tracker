@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
@@ -17,16 +17,6 @@ function App() {
   };
 
   const [tasks, setTasks] = useState(ExampleData);
-
-  useEffect(() => {
-    const fetchTasks = async () => {
-      const res = await fetch("http://localhost:5000/tasks");
-      const data = await res.json();
-
-      console.log(data);
-    };
-    fetchTasks();
-  }, []);
 
   // Delete Task
 

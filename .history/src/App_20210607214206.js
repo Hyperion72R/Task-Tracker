@@ -26,7 +26,7 @@ function App() {
       console.log(data);
     };
     fetchTasks();
-  }, []);
+  });
 
   // Delete Task
 
