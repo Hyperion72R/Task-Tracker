@@ -19,14 +19,14 @@ function App() {
       body: JSON.stringify(task),
     });
 
-    const data = await res.json();
+    const data = res.json();
 
     setTasks([...tasks, data]);
 
     // generate id
-    // const id = Math.floor(Math.random() * 10000) + 1;
-    // const newTask = { id, ...task };
-    // setTasks([...tasks, newTask]);
+    const id = Math.floor(Math.random() * 10000) + 1;
+    const newTask = { id, ...task };
+    setTasks([...tasks, newTask]);
   };
 
   const [tasks, setTasks] = useState(ExampleData);
