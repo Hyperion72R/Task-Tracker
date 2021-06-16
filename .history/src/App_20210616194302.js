@@ -52,7 +52,7 @@ function App() {
   // Fetch Task
 
   const fetchTask = async (id) => {
-    const res = await fetch(`http://localhost:5000/tasks/${id}`);
+    const res = await fetch(`http://localhost:5000/tasks${id}`);
     const data = await res.json();
 
     return data;
@@ -89,7 +89,7 @@ function App() {
 
     setTasks(
       tasks.map((task) =>
-        task.id === id ? { ...task, reminder: data.reminder } : task
+        task.id === id ? { ...task, reminder: !task.reminder } : task
       )
     );
   };
