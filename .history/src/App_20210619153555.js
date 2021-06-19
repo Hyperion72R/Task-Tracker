@@ -123,7 +123,6 @@ function App() {
             </>
           )}
         />
-
         <Route path="/about" component={About} />
         <Footer />
       </div>
